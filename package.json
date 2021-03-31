@@ -1,0 +1,30 @@
+{
+  "name": "bakery-beats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@top-gg/sdk": "^3.0.7",
+    "app-root-path": "^3.0.0",
+    "ascii-table": "0.0.9",
+    "beautify": "0.0.8",
+    "common-tags": "^1.8.0",
+    "cpu-stat": "^2.0.1",
+    "danbot-hosting": "^0.1.6",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.1",
+    "enmap": "^5.8.4",
+    "erela.js": "^2.3.2",
+    "fs": "0.0.1-security",
+    "humanize-duration": "^3.25.1",
+    "mongoose": "^5.11.14",
+    "ms": "^2.1.3",
+    "os": "^0.1.1",
+    "topgg-autoposter": "^1.1.3"
+  }
+}

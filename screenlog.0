@@ -1,0 +1,24 @@
+internal/modules/cjs/loader.js:960
+  throw err;
+  ^
+
+Error: Cannot find module '/root'
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:957:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:840:27)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)[39m
+[90m    at internal/main/run_main_module.js:18:47[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: []
+}
+internal/modules/cjs/loader.js:960
+  throw err;
+  ^
+
+Error: Cannot find module '/root/index.js'
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:957:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:840:27)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)[39m
+[90m    at internal/main/run_main_module.js:18:47[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: []
+}
