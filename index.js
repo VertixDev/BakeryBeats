@@ -11,7 +11,7 @@
 
 const config = require("./config/config.json");
 const Discord = require("discord.js");
-require('discord-reply'); 
+require('discord-reply');
 
 const client = new Discord.Client({
     fetchAllMembers: false,
@@ -39,15 +39,15 @@ client.manager = new Manager({
     nodes: [{
         host: "144.172.67.137",
         port: 4500,
-       password: "youshallnotpass",
+        password: "youshallnotpass",
         retryDelay: 5000,
     },
-    // {
-    //     host: "lava2.danbot.host",
-    //     port: 2333,
-    //     password: "DBH",
-    //     retryDelay: 5000,
-    // }
+        // {
+        //     host: "lava2.danbot.host",
+        //     port: 2333,
+        //     password: "DBH",
+        //     retryDelay: 5000,
+        // }
     ],
     autoPlay: true,
     send: (id, payload) => {
@@ -143,7 +143,7 @@ client.manager
     .on("trackStart", (player, track) => {
 
         if (player.trackRepeat || player.queueRepeat) return
-        if(client.db.get(`${player.guild}_announcements`) === false) return
+        if (client.db.get(`${player.guild}_announcements`) === false) return
         const b = client.channels.cache.get(player.textChannel)
         const embed = new Discord.MessageEmbed()
             .setDescription(`Now playing: [\`${track.title}\`](${track.uri})`)
