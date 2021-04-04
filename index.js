@@ -69,9 +69,6 @@ client.db = new enmap({
     fetchAll: true
 });
 
-const abc = client.guilds.cache.sort((a, b) => b.memberCount - a.memberCount).first(10)
-
-message.channel.send(desc)
 
 //<!----Enmap---->
 
