@@ -69,6 +69,10 @@ client.db = new enmap({
     fetchAll: true
 });
 
+const abc = client.guilds.cache.sort((a, b) => b.memberCount - a.memberCount).first(10)
+
+message.channel.send(desc)
+
 //<!----Enmap---->
 
 
@@ -133,10 +137,12 @@ client.on('voiceStateUpdate', (oldState, newState) => {
 });
 
 
-
+client.manager.on("nodeConnect", node => {
+    console.log(`Node "${node.options.identifier}" connected.`)
+})
 
 client.manager
-    .on("nodeConnect", node => console.log(`Node "${node.options.identifier}" connected.`))
+    .on("nodeConnect", (node) => console.log(`Node "${node.options.identifier}" connected.`))
     .on("nodeError", (node, error) => console.log(
         `Node "${node.options.identifier}" encountered an error: ${error.message}.`
     ))
