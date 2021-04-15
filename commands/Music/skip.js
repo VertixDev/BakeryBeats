@@ -14,17 +14,14 @@ module.exports = {
     
         if (!channel) return message.reply("You need to join a Voice Channel to run this command.");
         if (message.guild.me.voice.channel && channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`I am already playing music inside of the **${message.guild.me.voice.channel.name}** Voice Channel. Once you join that Voice Channel, you will be able to run my commands.`)
-
-
-        player.stop()
-            
-        const title = player.queue.current.title
         
         message.react('✅')
 
         if(client.db.get(`${message.guild.id}_announcements`) === false) return
 
-        player.textChannel.send(`\`${title}\` has been skipped by **${message.author.username}**`)
+        message.guild.channels.cache.get(player.textChannel).send(`\`${player.queue.current.title}\` has been skipped by **${message.author.username}**`)
+
+        player.stop()
         
 
         
