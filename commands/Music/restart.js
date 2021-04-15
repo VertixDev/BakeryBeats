@@ -18,7 +18,7 @@ module.exports = {
         player.seek(0)
 
         const embed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.pfp)
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setDescription(`Successfully restarted [\`${player.queue.current.title}\`](${player.queue.current.uri})`)
             .setColor("fcfcfc")
         message.channel.send(embed)

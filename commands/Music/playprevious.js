@@ -19,7 +19,7 @@ module.exports = {
         player.queue.add(res.tracks[0])
 
         const embed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.pfp)
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
             .setDescription(`Automatically added [\`${res.tracks[0].title.substr(0, 256 - 3)}\`](${res.tracks[0].uri}) to the queue.`)
             .setFooter("This was the song that was most recently played.")

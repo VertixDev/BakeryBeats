@@ -36,7 +36,6 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.prefix = prefix;
 
-client.pfp = "https://i.imgur.com/Eb2ki9u.png"
 
 client.manager = new Manager({
     nodes: [{
