@@ -13,6 +13,9 @@ const config = require("./config/config.json");
 const Discord = require("discord.js");
 require('discord-reply');
 
+const { spotifyAPI, spotifySecret } = require("./config/config.json")
+const Spotify = require("erela.js-spotify")
+
 const client = new Discord.Client({
     fetchAllMembers: false,
     restTimeOffset: 0,
@@ -49,6 +52,13 @@ client.manager = new Manager({
         //     retryDelay: 5000,
         // }
     ],
+    plugins: [
+        // Initiate the plugin and pass the two required options.
+        new Spotify({
+          clientID: spotifyAPI,
+          clientSecret: spotifySecret
+        })
+      ],
     autoPlay: true,
     send: (id, payload) => {
         const guild = client.guilds.cache.get(id);
@@ -124,8 +134,8 @@ client.on('message', async (message) => {
 
 client.on('voiceStateUpdate', (oldState, newState) => {
     if (oldState.id !== '804430122668654593') return
+    var ifPlayer = client.manager.get(newState.guild.id);
     if (oldState.channel !== null && newState.channel === null) {
-        var ifPlayer = client.manager.get(newState.guild.id);
         if (!ifPlayer) return
         if (ifPlayer.guild !== oldState.guild.id) return
         else client.channels.cache.get(ifPlayer.textChannel).send("The Player has stopped since the bot has been disconnected by an Administrator.")
