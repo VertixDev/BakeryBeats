@@ -22,7 +22,7 @@ module.exports = {
           if (guilds[i].me.voice.channel) connectedchannelsamount += 1;
         }
         const botinfo = new Discord.MessageEmbed()
-          .setAuthor(client.user.username, client.user.displayAvatarURL())
+          .setAuthor(client.user.username, "https://i.imgur.com/Eb2ki9u.png")
           .setTitle("__**Stats:**__")
           .setColor("fcfcfc")
           .addField("⏳ Memory Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}/ ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB\``, true)
@@ -52,7 +52,7 @@ module.exports = {
       console.log(String(e.stack).bgRed)
       return message.channel.send(new Discord.MessageEmbed()
         .setColor(`RED`)
-        .setFooter("Bakery Beats", client.user.displayAvatarURL())
+        .setFooter("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
         .setTitle(`❌ | An error occurred while fetching the bot info.`)
         .setDescription(`\`\`\`${e.message}\`\`\``)
       );

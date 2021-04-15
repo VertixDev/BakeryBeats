@@ -6,7 +6,7 @@ module.exports = {
     description: "View the Bot's Ping",
     run: async(client, message) => {
         const embed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setTitle("🏓 PONG!")
             .setDescription(`My ping is currently \`${client.ws.ping}ms\``)
             .setColor("fcfcfc")

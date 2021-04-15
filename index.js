@@ -36,7 +36,7 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.prefix = prefix;
 
-this.botURL = "https://i.imgur.com/Eb2ki9u.png"
+client.pfp = "https://i.imgur.com/Eb2ki9u.png"
 
 client.manager = new Manager({
     nodes: [{
@@ -160,7 +160,7 @@ client.manager
         const b = client.channels.cache.get(player.textChannel)
         const embed = new Discord.MessageEmbed()
             .setDescription(`Now playing: [\`${track.title}\`](${track.uri})`)
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
         embed.setFooter(`View the current queue by running bb!queue`)
 
@@ -172,7 +172,7 @@ client.manager
         const qEmbed = new Discord.MessageEmbed()
             .setDescription("The Queue has ended. \nYou can request more songs with `bb!play <song/song url>`.")
             .setColor(`fcfcfc`)
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setFooter("Bakery Beats will Automatically Disconnect if the Queue stays empty for longer than 60 seconds.")
         channel.send(qEmbed).then((p) => {
             setTimeout(() => {

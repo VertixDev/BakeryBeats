@@ -30,7 +30,7 @@ module.exports = async (client, message) => {
     if (message.channel.type === "dm") return;
 
     if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) return message.channel.send(new MessageEmbed()
-        .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+        .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
         .setDescription("Hey! What's up! I'm **Bakery Beats**, an all-in-one Discord Music Bot! \nMy Prefix is currently `bb!`.\nYou can view my commands by running `bb!help`. \nView more info about me by clicking [here](https://devnoah.me/bakerybeats)")
         .setColor("fcfcfc")
     )
@@ -51,7 +51,7 @@ module.exports = async (client, message) => {
 
     let webhoook = new WebhookClient('819464562331877376', 'AgONAwvPxunmZcNJAgld303PyvWYD-3DeV6WuNGQtvnpCK-l3C-CgWWbiQAqXjUfY_CK')
     const logEmbed = new Discord.MessageEmbed()
-        .setAuthor('Bakery Beats Logging', client.user.displayAvatarURL())
+        .setAuthor('Bakery Beats Logging', "https://i.imgur.com/Eb2ki9u.png")
         .addField(`General Information`, `${message.author.username} (\`${message.author.id}\`) ran command: \`${command.name}\`.`)
         .addField(`Guild Information`, `\`${message.guild.name}\` (\`${message.guild.id}\`)`)
         .setColor("fcfcfc")
@@ -64,7 +64,7 @@ module.exports = async (client, message) => {
     const isMaintenance = client.db.get(`maintenanceMode`)
 
     if (isMaintenance === true && message.author.id !== '394245930288676865') return message.channel.send(new MessageEmbed()
-        .setAuthor("Bakery Beats Maintenance", client.user.displayAvatarURL())
+        .setAuthor("Bakery Beats Maintenance", "https://i.imgur.com/Eb2ki9u.png")
         .setColor("fcfcfc")
         .addField("What does this mean?", `Bakery Beats is currently in Maintenance Mode. This means that no commands can be ran, and all Players have temporarily been disabled. Maintenance normally lasts for a couple of minutes, but times may vary. View the below notes for more information.`)
         .addField("Notes:", `\`DevNoahh#0001\`: There is an issue causing Music to lag extremely hard while the player is active. Developers are looking into this issue.`)
@@ -86,7 +86,7 @@ module.exports = async (client, message) => {
         // if (command.music === true && isDJ === true) {
         //     if (!message.member.hasPermission("MANAGE_NICKNAMES") || !message.member.roles.cache.some(role => role.name === 'DJ')) {
         //         return message.channel.send(new MessageEmbed()
-        //             .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+        //             .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
         //             .setDescription(`${message.author}, this server currently has DJ Mode enabled. This requires users who want to control the Music, have either a role called \`DJ\` or have the \`Manage Nicknames\` Permission.`)
         //             .setColor("fcfcfc"))
         //     }
@@ -97,8 +97,7 @@ module.exports = async (client, message) => {
             const timePassed = Date.now() - found;
             const timeLeft = timeout - timePassed;
             const embed = new MessageEmbed()
-                .setAuthor('Cooldown Alert', client.user.displayAvatarURL())
-                .setColor('#fcfcfc')
+                .setAuthor('Cooldown Alert', "https://i.imgur.com/Eb2ki9u.png")
                 .setDescription(`⏱ Woah there! You are currently on **Command Cooldown**\nYou can only use this command every **${ms(command.timeout)}** \nPlease wait **${humanizeDuration(timeLeft, { maxDecimalPoints: 1 })}**`)
                 .setFooter(message.author.username, message.author.displayAvatarURL())
             message.channel.send(embed)

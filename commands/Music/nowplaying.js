@@ -28,7 +28,7 @@ module.exports = {
             let amount = `${player.position}`
             const part = Math.floor((player.position / duration) * 10);
             const giveEmbed = new MessageEmbed()
-                .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                 .setColor("fcfcfc")
                 .setDescription(`${player.playing ? "▶️" : "⏸️"} Currently Playing ${title}\n${"▬".repeat(part) + "🔘" + "▬".repeat(10 - part)}[${functions.format(amount)} / ${functions.format(duration)}]\nRequested By: ${requester.tag}`)
             giveEmbed.setThumbnail(thumbnail)
@@ -50,7 +50,7 @@ module.exports = {
                                     const part = Math.floor((player.position / duration) * 10);
                                     giveEmbed.setDescription(`${player.playing ? "▶️" : "⏸️"} Currently Playing ${title}\n${"▬".repeat(part) + "🔘" + "▬".repeat(10 - part)}[${functions.format(amount)} / ${functions.format(duration)}]\nRequested By: ${requester.tag}`)
                                     giveEmbed.setThumbnail(thumbnail)
-                                    giveEmbed.setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                                    giveEmbed.setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                                 }
                             } else {
                                 if (player.playing === true) {
@@ -59,7 +59,7 @@ module.exports = {
                                     const part = Math.floor((player.position / duration) * 10);
                                     giveEmbed.setDescription(`${player.paused ? "▶️" : "⏸️"} Currently Playing ${title}\n${"▬".repeat(part) + "🔘" + "▬".repeat(9 - part)}[${functions.format(amount)} / ${functions.format(duration)}]\nRequested By: ${requester.tag}`)
                                     giveEmbed.setThumbnail(thumbnail)
-                                    giveEmbed.setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                                    giveEmbed.setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                                 }
                             }
                         }

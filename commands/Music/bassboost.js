@@ -132,7 +132,7 @@ module.exports = {
         }
 
         const embed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setDescription(`Set the bass boost to \`${level}\`.`)
             .setColor("fcfcfc")
         return message.channel.send(embed);

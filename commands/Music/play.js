@@ -24,13 +24,13 @@ module.exports = {
         return message.channel.send(new Discord.MessageEmbed()
           .setColor("RED")
           .setDescription("❌ | I need permissions to join your voice channel.")
-          .setAuthor(client.user.username, client.user.displayAvatarURL())
+          .setAuthor(client.user.username, "https://i.imgur.com/Eb2ki9u.png")
         );
       if (!permissions.has("SPEAK"))
         return message.channel.send(new Discord.MessageEmbed()
           .setColor("RED")
           .setDescription("❌ | I need permissions to speak in your voice channel.")
-          .setAuthor(client.user.username, client.user.displayAvatarURL())
+          .setAuthor(client.user.username, "https://i.imgur.com/Eb2ki9u.png")
         );
 
 
@@ -70,7 +70,7 @@ module.exports = {
 
           if (!player.playing && !player.paused && !player.queue.size) player.play();
           let embed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
             .setDescription(`Successfully added [\`${res.tracks[0].title}\`](${res.tracks[0].uri}) to the queue.`)
 
@@ -88,7 +88,7 @@ module.exports = {
 
           if (!player.playing && !player.paused && player.queue.totalSize === res.tracks.length) player.play();
           return message.channel.send(new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
             .setDescription(`Successfully added \`${res.playlist.name}\` with \`${res.tracks.length}\` songs to the queue.`)
             .setFooter(`The Queue Length is now ${player.queue.size}`)
@@ -106,7 +106,7 @@ module.exports = {
             .join('\n');
 
           const searchEmbed = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setDescription(results)
             .setFooter("Respond with a number to play that track, or respond with \"cancel\" to cancel.")
             .setColor('fcfcfc')
@@ -140,7 +140,7 @@ module.exports = {
 
           if (!player.playing && !player.paused && !player.queue.size) player.play();
           let a = new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
             .setDescription(`Successfully added \`${res.tracks[index].title}\` to the queue.`)
 

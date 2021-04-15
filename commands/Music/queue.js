@@ -16,7 +16,7 @@ module.exports = {
         const queue = player.queue;
         const embed = new Discord.MessageEmbed()
             .setTitle(`🎵 Queue for ${message.guild.name}`)
-            .setAuthor(`Bakery Beats`, client.user.displayAvatarURL())
+            .setAuthor(`Bakery Beats`, "https://i.imgur.com/Eb2ki9u.png")
             .setColor("fcfcfc")
 
         // change for the amount of tracks per page

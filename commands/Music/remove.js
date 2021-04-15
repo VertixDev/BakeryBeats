@@ -26,14 +26,14 @@ module.exports = {
             if (Number(args[0]) > player.queue.size)
                 return message.channel.send(new Discord.MessageEmbed()
                     .setColor("RED")
-                    .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                    .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                     .setDescription(`❌ | The queue number you provided was not found.`)
                 );
 
             player.queue.remove(Number(args[0]) - 1);
 
             return message.channel.send(new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setDescription(`Successfully removed Song #${Number(args[0])} from the queue.`)
             .setColor("fcfcfc")
             )

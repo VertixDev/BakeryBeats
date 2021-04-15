@@ -20,7 +20,7 @@ module.exports = {
             if (!player.get(`beforeshuffle`)) {
                 return message.channel.send(new Discord.MessageEmbed()
                     .setColor("RED")
-                    .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                    .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png"())
                     .setDescription(`${`❌ | The queue isn't currently shuffled!.`}`)
                     .setFooter("To shuffle the queue, run bb!shuffle")
                 );
@@ -31,7 +31,7 @@ module.exports = {
                 player.queue.add(track);
 
             return message.channel.send(new Discord.MessageEmbed()
-                .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                 .setDescription(`The Queue has successfully been unshuffled and reverted to it's original state.`)
                 .setColor("#fcfcfc")
                 .setFooter(`You can reshuffle the queue with bb!shuffle`))

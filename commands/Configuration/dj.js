@@ -13,7 +13,7 @@ module.exports = {
 
          if (client.db.get(`${message.guild.id}_dj`) === true) {
             return message.channel.send(new Discord.MessageEmbed()
-               .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+               .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                .setDescription(`DJ Only Mode is currently \`enabled\` for \`${message.guild.name}\``)
                .setColor("fcfcfc")
                .setFooter("To enable or disable DJ mode, run bb!dj <enable/disable>")
@@ -22,7 +22,7 @@ module.exports = {
 
          else if (!client.db.get(`${message.guild.id}_dj`)) {
             return message.channel.send(new Discord.MessageEmbed()
-               .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+               .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                .setDescription(`DJ Only Mode is currently \`disabled\` for \`${message.guild.name}\``)
                .setColor("fcfcfc")
                .setFooter("To enable or disable DJ mode, run bb!dj <enable/disable>")

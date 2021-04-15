@@ -44,13 +44,13 @@ module.exports = {
 
 
       const embed = new MessageEmbed()
-        .setAuthor("Need help?", client.user.displayAvatarURL())
+        .setAuthor("Need help?", "https://i.imgur.com/Eb2ki9u.png")
         .setTitle("All of my commands are listed below!")
         .addFields(categories)
         .setDescription(
           `Use \`bb!help\` followed by a command name to get additional information on that command. For example: \`bb!help play\`.`
         )
-        .setThumbnail(client.user.displayAvatarURL())
+        .setThumbnail("https://i.imgur.com/Eb2ki9u.png")
         .setFooter(
           `Requested by ${message.author.tag}`,
           message.author.displayAvatarURL({ dynamic: true })
@@ -115,7 +115,7 @@ module.exports = {
         )
         embed.setTimestamp()
         embed.setColor(roleColor);
-        embed.setThumbnail(client.user.displayAvatarURL())
+        embed.setThumbnail("https://i.imgur.com/Eb2ki9u.png")
       return message.channel.send(embed);
     }
   },

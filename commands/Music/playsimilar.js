@@ -29,7 +29,7 @@ module.exports = {
             player.queue.add(res.tracks[randomtracknum])
 
             let a = new Discord.MessageEmbed()
-                .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                 .setColor("fcfcfc")
                 .setDescription(`Automatically added \`${res.tracks[randomtracknum].title.substr(0, 256-3)}\` to the queue.`)
                 .setFooter("This song may not be similar, as it was chosen by YouTube's A.I.")

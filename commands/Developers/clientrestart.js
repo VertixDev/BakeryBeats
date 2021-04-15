@@ -3,7 +3,7 @@ const appRoot = require("app-root-path")
 const config = require(appRoot + "/config/config.json")
 
 module.exports = {
-    name: "restart",
+    name: "clientrestart",
     description: "Restart the bot",
     run: async (client, message, args) => {
         if (message.author.id !== "394245930288676865") return

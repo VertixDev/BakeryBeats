@@ -21,13 +21,13 @@ module.exports = {
         if (Number(args[0]) < 0 || Number(args[0]) >= player.queue.current.duration / 1000)
         return message.channel.send(new Discord.MessageEmbed()
                 .setColor("RED")
-                .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+                .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
                 .setDescription(`${`❌ | You may seek from \`0\` - \`${player.queue.current.duration / 1000}\``}`)
             );
 
             player.seek(Number(args[0]) * 1000);
             return message.channel.send(new Discord.MessageEmbed()
-            .setAuthor("Bakery Beats", client.user.displayAvatarURL())
+            .setAuthor("Bakery Beats", "https://i.imgur.com/Eb2ki9u.png")
             .setDescription(`Successfully skipped to ${format(Number(args[0]) * 1000)}`)
             .setColor("fcfcfc"))
 
