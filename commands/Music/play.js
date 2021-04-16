@@ -154,7 +154,7 @@ module.exports = {
       }
     } catch (e) {
       console.log(e)
-      functions.error(error, 'Play', message)
+      functions.error(e, 'Play', message)
     }
   }
 }

@@ -100,6 +100,7 @@ module.exports = async (client, message) => {
                 .setAuthor('Cooldown Alert', "https://i.imgur.com/Eb2ki9u.png")
                 .setDescription(`⏱ Woah there! You are currently on **Command Cooldown**\nYou can only use this command every **${ms(command.timeout)}** \nPlease wait **${humanizeDuration(timeLeft, { maxDecimalPoints: 1 })}**`)
                 .setFooter(message.author.username, message.author.displayAvatarURL())
+                .setColor("fcfcfc")
             message.channel.send(embed)
         } else {
             command.run(client, message, args);

@@ -194,6 +194,14 @@ client.manager
         player.setVolume(50);
     })
 
+    .on("nodeDisconnect", (node, reason) => {
+        console.log(`Node Disconnection occured. \n${reason}`)
+    })
+
+    .on("nodeReconnect", (node) => {
+        console.log(`A Node disconnected from the WebSocket.`)
+    })
+
 
 
 

@@ -31,7 +31,7 @@ module.exports = {
         else {
             player.setTrackRepeat(!player.trackRepeat);
             const trackRepeat = player.trackRepeat ? "enabled" : "disabled";
-            reply(client, message, `Successfully ${trackRepeat} track repeating for the song: [\`${player.queue.current.title}\`](${player.queue.current.uri})`);
+            reply(client, message, `Successfully ${trackRepeat} track repeating for the song: \`${player.queue.current.title}\``);
             if(message.channel.id === player.textChannel) return
             message.guild.channels.cache.get(player.textChannel).send(`Track Repeat has been ${trackRepeat} by **${message.author.username}**`)
         }
